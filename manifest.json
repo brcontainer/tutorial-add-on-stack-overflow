@@ -1,0 +1,28 @@
+{
+    "name": "TutorialStackOverflowGuilhermeNascimento",
+    "version": "1.0",
+    "manifest_version": 2,
+    "description": "Tutorial para o stack overflow Guilherme Nascimento",
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+    "content_scripts": [{
+        "matches": [
+            "*://superuser.com/*",
+            "*://serverfault.com/*",
+            "*://stackoverflow.com/*",
+
+            "*://*.superuser.com/*",
+            "*://*.serverfault.com/*",
+            "*://*.stackoverflow.com/*"
+        ],
+        "js": [
+            "inject.js"
+        ]
+    }],
+    "permissions": [
+        "tabs"
+    ]
+}
